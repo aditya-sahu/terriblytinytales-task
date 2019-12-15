@@ -30,7 +30,7 @@
 				$parent.addClass('active');
 				e.preventDefault();
 			});
-		});	
+		});			
 	</script>
   </head>
 
@@ -47,7 +47,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img id="logo-image" src="static/logo.JPG"></img></a>
+          <a class="navbar-brand" href="#"><img id="logo-image" src="logo.jpg"></img></a>
         </div>
         
 		<div id="navbar" class="collapse navbar-collapse">
@@ -55,7 +55,7 @@
 			  <ul class="nav navbar-nav navbar-right">
 				<li class="nav-item dropdown">
 					<a href="#" class="notification dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-					  <img id="bell-icon" src="static/bell.png">
+					  <img id="bell-icon" src="bell.png">
 					  </img>
 					 <span class="badge">699</span>
 					</a>
@@ -90,19 +90,19 @@
               <li class="nav-item">
                 <a class="nav-link active" href="#">
                   <span data-feather="home"></span>
-                  <img id="sidebar1" class="sidebar-icons" src="static/sidebar1.jpg"></img> <span class="sr-only">(current)</span>
+                  <img id="sidebar1" class="sidebar-icons" src="sidebar1.jpg"></img> <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="file"></span>
-                  <img id="sidebar2" class="sidebar-icons" src="static/sidebar2.JPG"></img>
+                  <img id="sidebar2" class="sidebar-icons" src="sidebar2.JPG"></img>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="shopping-cart"></span>
-                  <img id="sidebar3" class="sidebar-icons" src="static/sidebar3.JPG"></img>
+                  <img id="sidebar3" class="sidebar-icons" src="sidebar3.JPG"></img>
                 </a>
               </li>
             </ul>
@@ -124,10 +124,10 @@
 		tabular format
 		</small>
 		<br /><br />
-		<form>
+		<form id="myForm" action="/findOccurences/" method="GET">
 		  <div class="form-group">
 			<label for="userInput">Your Input</label>
-			<input type="number" min="0" class="form-control" id="userInput" placeholder="Enter a number input">
+			<input name="userInput" type="number" min="0" class="form-control" id="userInput" placeholder="Enter a number input">
 			<small class="form-text text-muted">Click on submit button to load the results.</small>
 		  </div>
 		  <button type="submit" class="btn btn-primary">Submit</button>
@@ -142,7 +142,7 @@
     <footer class="footer">
       <div class="container">
 		  <div class="row">
-			<div class="col-lg-3"><img class="footer-image" src="static/footer-image.JPG"/></div>
+			<div class="col-lg-3"><img class="footer-image" src="footer-image.JPG"/></div>
 		  </div>
 		  <div class="row footer-text">
 			<span>Terribly Tiny Tales.</span>

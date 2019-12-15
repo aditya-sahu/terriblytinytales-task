@@ -1,0 +1,22 @@
+{
+  "name": "terriblytinytales-task",
+  "version": "1.0.0",
+  "description": "\"# terriblytinytales-task\" \r # terriblytinytales-task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aditya-sahu/terriblytinytales-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aditya-sahu/terriblytinytales-task/issues"
+  },
+  "homepage": "https://github.com/aditya-sahu/terriblytinytales-task#readme",
+  "dependencies": {
+    "pug": "^2.0.4"
+  }
+}
