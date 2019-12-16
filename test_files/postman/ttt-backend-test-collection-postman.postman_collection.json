@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "9730eb30-2f6b-4221-a25f-b1d12b104449",
+		"name": "ttt-backend-test-collection-postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get N Occurrences",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://terriblytinytalestask.herokuapp.com/findOccurrences?userInput=4",
+					"protocol": "https",
+					"host": [
+						"terriblytinytalestask",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"findOccurrences"
+					],
+					"query": [
+						{
+							"key": "userInput",
+							"value": "4"
+						}
+					]
+				},
+				"description": "GET Web API:\n1. Takes a number N as input\n2. Processes a text file hosted on https://terriblytinytales.com/test.txt\n3. Returns top N frequent occurences"
+			},
+			"response": []
+		},
+		{
+			"name": "Get N Occurrences 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://terriblytinytalestask.herokuapp.com/findOccurrences?userInput=10",
+					"protocol": "https",
+					"host": [
+						"terriblytinytalestask",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"findOccurrences"
+					],
+					"query": [
+						{
+							"key": "userInput",
+							"value": "10"
+						}
+					]
+				},
+				"description": "GET Web API:\n1. Takes a number N as input\n2. Processes a text file hosted on https://terriblytinytales.com/test.txt\n3. Returns top N frequent occurences"
+			},
+			"response": []
+		},
+		{
+			"name": "Get N Occurrences 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://terriblytinytalestask.herokuapp.com/findOccurrences?userInput=50",
+					"protocol": "https",
+					"host": [
+						"terriblytinytalestask",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"findOccurrences"
+					],
+					"query": [
+						{
+							"key": "userInput",
+							"value": "50"
+						}
+					]
+				},
+				"description": "GET Web API:\n1. Takes a number N as input\n2. Processes a text file hosted on https://terriblytinytales.com/test.txt\n3. Returns top N frequent occurences"
+			},
+			"response": []
+		},
+		{
+			"name": "Get N Occurrences 4 (negative)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://terriblytinytalestask.herokuapp.com/findOccurrences?userInput=-1",
+					"protocol": "https",
+					"host": [
+						"terriblytinytalestask",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"findOccurrences"
+					],
+					"query": [
+						{
+							"key": "userInput",
+							"value": "-1"
+						}
+					]
+				},
+				"description": "GET Web API:\n1. Takes a number N as input\n2. Processes a text file hosted on https://terriblytinytales.com/test.txt\n3. Returns top N frequent occurences"
+			},
+			"response": []
+		},
+		{
+			"name": "Get N Occurrences 5 (negative)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://terriblytinytalestask.herokuapp.com/findOccurrences?userInput=-100",
+					"protocol": "https",
+					"host": [
+						"terriblytinytalestask",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"findOccurrences"
+					],
+					"query": [
+						{
+							"key": "userInput",
+							"value": "-100"
+						}
+					]
+				},
+				"description": "GET Web API:\n1. Takes a number N as input\n2. Processes a text file hosted on https://terriblytinytales.com/test.txt\n3. Returns top N frequent occurences"
+			},
+			"response": []
+		},
+		{
+			"name": "Get N Occurrences 6 (negative)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://terriblytinytalestask.herokuapp.com/findOccurrences?userInput=-500000",
+					"protocol": "https",
+					"host": [
+						"terriblytinytalestask",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"findOccurrences"
+					],
+					"query": [
+						{
+							"key": "userInput",
+							"value": "-500000"
+						}
+					]
+				},
+				"description": "GET Web API:\n1. Takes a number N as input\n2. Processes a text file hosted on https://terriblytinytales.com/test.txt\n3. Returns top N frequent occurences"
+			},
+			"response": []
+		},
+		{
+			"name": "Get N Occurrences 7 (negative)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://terriblytinytalestask.herokuapp.com/findOccurrences?userInput=999",
+					"protocol": "https",
+					"host": [
+						"terriblytinytalestask",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"findOccurrences"
+					],
+					"query": [
+						{
+							"key": "userInput",
+							"value": "999"
+						}
+					]
+				},
+				"description": "GET Web API:\n1. Takes a number N as input\n2. Processes a text file hosted on https://terriblytinytales.com/test.txt\n3. Returns top N frequent occurences"
+			},
+			"response": []
+		},
+		{
+			"name": "Get N Occurrences 8 (negative)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://terriblytinytalestask.herokuapp.com/findOccurrences?userInput=999",
+					"protocol": "https",
+					"host": [
+						"terriblytinytalestask",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"findOccurrences"
+					],
+					"query": [
+						{
+							"key": "userInput",
+							"value": "999"
+						}
+					]
+				},
+				"description": "GET Web API:\n1. Takes a number N as input\n2. Processes a text file hosted on https://terriblytinytales.com/test.txt\n3. Returns top N frequent occurences"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
