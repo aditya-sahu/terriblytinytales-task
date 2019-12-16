@@ -73,16 +73,15 @@ exports.findOccurrences = (req, res) => {
             const data = body;
             //const data = "This is a random generated sentence which does not seem random at all all seems all all is a random which.";
             
-            // Check if words are more than the desired input. 
-            var wordsCount = getWordCount(data);
-            if(wordsCount < N ) {
-                console.log("Not enough words, as desired by input; Displaying maximum data.");
-                N = wordsCount;
-            }
-            
             // Count occurrences
             var dict = getFreq(data);
 
+            // Check if words are more than the desired input. 
+            var wordsCount = Object.keys(dict).length;
+            if(wordsCount < N ) {
+                console.log("Not enough words, as desired by input; Displaying maximum data possible.");
+            }
+            
             // Sort the occurrences in decreasing order and slice the array so that only N words are stored.
             var finalArr = getNOccurrences(N,dict);
             res.send({status:200, message: finalArr});
