@@ -71,3 +71,10 @@ findOccurrences() -> controllers/ttt.controller.js -> routes/ttt.route.js -> ind
         5. Slice the array to only N (desired input)
         6. Return the final result
     3. Else Return internal server error (500)
+
+## Results
+
+Screenshots: 
+![alt text][landing page]
+
+[landing page]: https://github.com/aditya-sahu/terriblytinytales-task/blob/master/test_files/end%20to%20end/1.JPG "Landing Page"
