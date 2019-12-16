@@ -74,10 +74,16 @@ findOccurrences() -> controllers/ttt.controller.js -> routes/ttt.route.js -> ind
 
 ## Results
 
-Screenshots: 
-
+### Screenshots: 
+landing page:
 * ![alt text][landing page]
+
+Test input "3":
 * ![alt text][Test input "3"]
+
+Test input "-9":
+* ![alt text][Test input "-9"]
 
 [landing page]: https://github.com/aditya-sahu/terriblytinytales-task/blob/master/test_files/end%20to%20end/1.JPG "Landing Page"
 [Test input "3"]: https://github.com/aditya-sahu/terriblytinytales-task/blob/master/test_files/end%20to%20end/2.JPG "Test Input 3"
+[Test input "-9"]: https://github.com/aditya-sahu/terriblytinytales-task/blob/master/test_files/end%20to%20end/3.JPG "Test Input -9"
