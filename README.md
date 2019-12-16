@@ -52,18 +52,18 @@ To run the website, there are no requirements as such because the website is hos
 2. Algorithm
     1. Fetch the text file by creating a request to URL
     2. If successful, 
-    a. Check if total words are more than the user input
-    b. Count frequency of each word and store into a HashMap
-    c. The frequency is counted as 
-      * Consider newline, tabspaces, vertical spaces, etc. as single whitespace
-      * Treat Common Punctuation as single whitespace
-      * Get rid of quotations (only at the start or end of the word)
-      * Different Cases with Same spelling should be considered as one word.
-      * Split the words into an array
-      * If word has a key
-        * Increment by one
-      * Else create the key with value 1.
-    d. Sort the hashmap by their values in Decreasing order
-    e. Slice the array to only N (desired input)
-    f. Return the final result
-  iii. Else Return internal server error (500)
+        1. Check if total words are more than the user input
+        2. Count frequency of each word and store into a HashMap
+        3. The frequency is counted as 
+            * Consider newline, tabspaces, vertical spaces, etc. as single whitespace
+            * Treat Common Punctuation as single whitespace
+            * Get rid of quotations (only at the start or end of the word)
+            * Different Cases with Same spelling should be considered as one word.
+            * Split the words into an array
+            * If word has a key
+                * Increment by one
+            * Else create the key with value 1.
+        4. Sort the hashmap by their values in Decreasing order
+        5. Slice the array to only N (desired input)
+        6. Return the final result
+  3. Else Return internal server error (500)
