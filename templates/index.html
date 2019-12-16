@@ -23,14 +23,50 @@
     <link href="index.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script>
+	
+
+			function submitfunc() {
+				console.log('submit bttn clicked');
+				var userInput = document.getElementById('userInput').value;
+				 $.ajax({
+					type: 'GET',
+					url: '/findOccurrences?userInput='+userInput,
+					contentType: 'application/json',
+					success: function(response) {
+						console.log(response);
+						var resultTable = $('#resultTable');
+						resultTable.empty();
+						resultTable.append('\
+						<thead>\
+							<tr>\
+								<th>Word</th>\
+								<th>Frequency</th>\
+							</tr>\
+						</thead>\
+						');
+						response.message.forEach(function(data){
+						
+						resultTable.append('<tr><td>'+data[0]+'</td><td>'+data[1]+'</td>');	
+						
+						});
+						
+						document.getElementById('resultTable').style.display = "";
+					}
+				});
+				
+			}
+		
 		$(document).ready(function () {
+			document.getElementById('resultTable').style.display = "none";
 			$('.sidebar-sticky .nav li a').click(function(e) {
 				$('.sidebar-sticky .nav li a.active').removeClass('active');
 				var $parent = $(this).parent().find('a');
 				$parent.addClass('active');
 				e.preventDefault();
 			});
-		});			
+		});		
+
+		
 	</script>
   </head>
 
@@ -124,18 +160,24 @@
 		tabular format
 		</small>
 		<br /><br />
-		<form id="myForm" action="/findOccurences/" method="GET">
+		<form id="myForm">
 		  <div class="form-group">
 			<label for="userInput">Your Input</label>
 			<input name="userInput" type="number" min="0" class="form-control" id="userInput" placeholder="Enter a number input">
 			<small class="form-text text-muted">Click on submit button to load the results.</small>
 		  </div>
-		  <button type="submit" class="btn btn-primary">Submit</button>
 		</form>
-		
-		
+		<button id="submitButton" class="btn btn-primary" onclick="submitfunc()">Submit</button>
 	  </div>
-	 
+	  
+	 <table id="resultTable" border='1' class="table table-dark">
+		<thead>
+		<tr>
+		<th>Word</th>
+		<th>Frequency</th>
+		</tr>
+		</thead>
+	 </table>
 	  
     </div>
 
