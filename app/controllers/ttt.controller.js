@@ -59,7 +59,11 @@ exports.findOccurrences = (req, res) => {
 
     /* Processing takes place now onwards.
     */
-    if( N <= 0 ) res.send({status:400, message:'Bad Request'});
+    if( N <= 0 ) {
+        res.send({status:400, message:'Bad Request'});
+        res.end();
+        return;
+    }
     // fetch the text file from URL: https://terriblytinytales.com/test.txt
     request.get('https://terriblytinytales.com/test.txt', function (error, response, body) {
         console.log(error);
@@ -84,7 +88,7 @@ exports.findOccurrences = (req, res) => {
             res.send({status:200, message: finalArr});
         }
         else {
-            res.send({status:400, message:'Error contacting server.'});
+            res.send({status:500, message:'Error contacting server.'});
         }
     });
 };
