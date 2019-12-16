@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/aditya-sahu/terriblytinytales-task#readme",
   "dependencies": {
-	"express": "^4.16.4"
+	"express": "^4.16.4",
+	"request": "^2.88.x",
+	"body-parser": "1.18.x"
   },
   "engines": {
     "node": "11.x"
