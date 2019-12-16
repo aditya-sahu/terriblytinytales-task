@@ -50,8 +50,8 @@ To run the website, there are no requirements as such because the website is hos
   * Homepage which displays landing webpage
   * Contains GET type of API which takes the user input as the parameter and returns the result
 2. Algorithm
-  i. Fetch the text file by creating a request to URL
-  ii. If successful, 
+    1. Fetch the text file by creating a request to URL
+    2. If successful, 
     a. Check if total words are more than the user input
     b. Count frequency of each word and store into a HashMap
     c. The frequency is counted as 
