@@ -59,7 +59,7 @@ exports.findOccurrences = (req, res) => {
 
     /* Processing takes place now onwards.
     */
-
+    if( N <= 0 ) res.send({status:400, message:'Bad Request'});
     // fetch the text file from URL: https://terriblytinytales.com/test.txt
     request.get('https://terriblytinytales.com/test.txt', function (error, response, body) {
         console.log(error);
