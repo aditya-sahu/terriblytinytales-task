@@ -28,7 +28,11 @@ To run the website, there are no requirements as such because the website is hos
 
 ## Architecture
 
+#### Request:
+index.html -- (AJAX Call) --> index.js -> routes/ttt.route.js -> controllers/ttt.controller.js -> findOccurrences()
 
+#### Response:
+findOccurrences() -> controllers/ttt.controller.js -> routes/ttt.route.js -> index.js -> index.html -> AJAX Response
 
 ## Modules
 
