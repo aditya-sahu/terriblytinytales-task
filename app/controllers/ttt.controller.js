@@ -1,11 +1,3 @@
-function getWordCount(str) {
-    str = str.replace(/\W+[ ]/g, ' ');
-    
-    var words = str.split(' ');
-    var ctr = words.length;
-    return ctr;
-}
-
 function getFreq(str) {
     
     // This will contain Key as the Word and respective value as their occurrence
