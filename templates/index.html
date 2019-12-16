@@ -23,41 +23,14 @@
     <link href="index.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script>
-	
-
-			function submitfunc() {
-				console.log('submit bttn clicked');
-				var userInput = document.getElementById('userInput').value;
-				 $.ajax({
-					type: 'GET',
-					url: '/findOccurrences?userInput='+userInput,
-					contentType: 'application/json',
-					success: function(response) {
-						console.log(response);
-						var resultTable = $('#resultTable');
-						resultTable.empty();
-						resultTable.append('\
-						<thead>\
-							<tr>\
-								<th>Word</th>\
-								<th>Frequency</th>\
-							</tr>\
-						</thead>\
-						');
-						response.message.forEach(function(data){
-						
-						resultTable.append('<tr><td>'+data[0]+'</td><td>'+data[1]+'</td>');	
-						
-						});
-						
-						document.getElementById('resultTable').style.display = "";
-					}
-				});
-				
-			}
-		
+					
 		$(document).ready(function () {
 			document.getElementById('resultTable').style.display = "none";
+			 document.getElementById('errorMsg').style.display = "none";
+			 document.getElementById('myForm').addEventListener('submit', function(e) {
+					submitfunc();
+					e.preventDefault();
+			}, false);
 			$('.sidebar-sticky .nav li a').click(function(e) {
 				$('.sidebar-sticky .nav li a.active').removeClass('active');
 				var $parent = $(this).parent().find('a');
@@ -65,6 +38,45 @@
 				e.preventDefault();
 			});
 		});		
+			
+
+		function submitfunc() {
+			console.log('submit bttn clicked');
+			var userInput = document.getElementById('userInput').value;
+			if(userInput <= 0) { 
+				document.getElementById('errorMsg').style.display = "";
+				return;
+			}
+			else  document.getElementById('errorMsg').style.display = "none";
+			 $.ajax({
+				type: 'GET',
+				url: '/findOccurrences?userInput='+userInput,
+				contentType: 'application/json',
+				success: function(response) {
+					console.log(response);
+					var resultTable = $('#resultTable');
+					resultTable.empty();
+					resultTable.append('\
+					<thead>\
+						<tr>\
+							<th>#</th>\
+							<th>Word</th>\
+							<th>Frequency</th>\
+						</tr>\
+					</thead>\
+					');
+					var ctr=1;
+					response.message.forEach(function(data){
+					resultTable.append('<tr><td>'+ctr+'</td><td>'+data[0]+'</td><td>'+data[1]+'</td>');	
+					ctr++;
+					});
+					
+					document.getElementById('resultTable').style.display = "";
+				}
+			});
+			
+		}
+
 
 		
 	</script>
@@ -149,7 +161,7 @@
    <!-- Begin page content -->
     <div class="container">
       <div class="header">
-		<h1><b>Terribly Tiny Tales - Solution Page</b></h1>
+		<h1><b>Terribly Tiny Tales - Find N Occurrences</b></h1>
       </div>
 	  
       <div class="lead-box">
@@ -163,15 +175,15 @@
 		<form id="myForm">
 		  <div class="form-group">
 			<label for="userInput">Your Input</label>
-			<input name="userInput" type="number" min="0" class="form-control" id="userInput" placeholder="Enter a number input">
+			<input name="userInput" type="number" min="1" class="form-control" id="userInput" placeholder="Enter a number input">
 			<small class="form-text text-muted">Click on submit button to load the results.</small>
 		  </div>
 		</form>
 		<button id="submitButton" class="btn btn-primary" onclick="submitfunc()">Submit</button>
 	  </div>
-	  
-	 <table id="resultTable" border='1' class="table table-dark">
-		<thead>
+	  <large id="errorMsg" style="color:red">Please enter a valid input.</large>
+	 <table id="resultTable" border='1' class="table">
+		<thead class="thead-light">
 		<tr>
 		<th>Word</th>
 		<th>Frequency</th>
