@@ -51,7 +51,9 @@ exports.findOccurrences = (req, res) => {
 
     /* Processing takes place now onwards.
     */
-    if( N <= 0 ) {
+   var bIsDigit = RegExp(/^\d+$/).test(N);
+   console.log(bIsDigit);
+    if( !bIsDigit || N <= 0 ) {
         res.send({status:400, message:'Bad Request'});
         res.end();
         return;
